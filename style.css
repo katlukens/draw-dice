@@ -8,6 +8,7 @@
   --fs-400: 1.25rem;
   --fs-500: 1.375rem;
   --fs-600: 1.75rem;
+  --fs-700: 2rem;
   --fs-900: 2.125rem;
 
   --fw-200: 200;
@@ -72,6 +73,8 @@
     overflow-wrap: break-word;
   }
 
+  ul,
+  ol,
   ul[class], 
   ol[class] {
     list-style: none;
@@ -98,75 +101,33 @@
     flex-wrap: wrap;
     /* justify-content: center; */
     align-items: center;
+    text-align: center;
     gap: 2rem;
+    padding: 2rem;
     outline: 1px solid red;
   }
 
   /* the dice */
 
-  .prompt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  .square {
+    aspect-ratio: 1/1;
+    width: 100%;
+    background: var(--clr-primary-400);
+    text-align: center;
+    contain: strict;
   }
 
-  .square {
-    position: relative;
-    width: 50%;
-    background: #8ea8da;
-  }
-  
-  .square:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
+  .square p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
   
   .d6 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    font-size: var(--fs-300);
-  }
-  
-  /* .container li::before {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 5rem;
-    background: var(--clr-accent-400);
-    position: absolute;
-    z-index: -1;
-    transform: translate(-.5rem, -.5rem);
-  } */
-
-  /* .d6 {
-    font-family: var(--ff-sans);
-    margin: 1rem;
-    outline: 1px solid purple;
-    display: flex;
-    grid-template-areas: fit-content(20rem);
-  } */
-
-  /* .d6 {
-    align-items: center;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-    grid-template-rows: auto;
-    justify-items: center;
-    padding: 2rem;
-    perspective: 600px;
-    outline: 1px solid purple;
-  } */
-
-  .d6::after {
-    content: '';
-    display: block;
-    padding-right: 100%;
+    font-size: var(--fs-700);
   }
 
   /* some button shit */
