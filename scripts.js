@@ -1,9 +1,9 @@
 function rollDice(){
     
     // individual dice
-    const noun = ["person", "cat",  "flower"] 
-    const feel = ["sad", "happy"] 
-    const time = ["1 minute", "5 minutes", "10 minutes"] 
+    const noun = ["person", "cat",  "dragon", "house", "frog", "shoe"] 
+    const feel = ["friendly", "angry", "sad", "laughing","sleeping", "bored" ] 
+    const time = ["1 minute", "3 minutes", "5 minutes", "10 minutes", "15 minutes", "30 minutes"] 
 
     // all dice
     const options = [noun, feel, time]
@@ -29,7 +29,7 @@ function rollDice(){
 }
 
 function addListener(){
-    document.querySelector(".btn").addEventListener("click", myFunction);
+    document.querySelector(".btn").addEventListener("click", rollDice);
 }
 
 document.addEventListener("DOMContentLoaded", function(event){
