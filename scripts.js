@@ -1,22 +1,31 @@
-function myFunction(){
+function rollDice(){
     
-    const noun = ["person", "cat"] 
+    // individual dice
+    const noun = ["person", "cat",  "flower"] 
     const feel = ["sad", "happy"] 
-    const time = [1, 5, 10] 
+    const time = ["1 minute", "5 minutes", "10 minutes"] 
+
+    // all dice
     const options = [noun, feel, time]
+
+    // make a new array to hold results
+    var results = new Array();
     
+//    roll each die
     for (let i = 0; i < options.length; i++){
-        // get a random number between x and y, n timesn
-        // let name = options[i]
-        console.log(`giving a random number for ${options[i]}`)
-        console.log(Math.floor(Math.random() * options[i].length) + 1);    // update 
-        
+
+        // append a random result into our results
+        let dieSide = Math.floor(Math.random() * options[i].length)
+        let result = options[i][dieSide]
+        results.push(result);
+        console.log(`${options[i]}: ${result}`);
     }
+
+    document.getElementById("noun").innerHTML = results[0]
+    document.getElementById("feel").innerHTML = results[1]
+    document.getElementById("time").innerHTML = results[2]
     
-    alert ("Hello, Travis");
-
-
-    document.getElementById("la").innerHTML("foo");
+//    alert (results);
 }
 
 function addListener(){
