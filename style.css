@@ -27,6 +27,7 @@
   --clr-primary-400: #8ea8da;
 
   --br: 1rem;
+  --spacer: 1rem;
 }
 
 @media (min-width: 40em) {
@@ -51,9 +52,9 @@
     margin: 0;
   }
 
-  html, body {
+  /* html, body {
     height: 100%;
-  }
+  } */
   
   body {
     line-height: 1.5;
@@ -71,6 +72,7 @@
   
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+    /* margin: 0; */
   }
 
   ul,
@@ -91,22 +93,49 @@
     background: var(--clr-neutral-400);
     font-size: var(--fs-900);
     font-family: serif;
-    display: grid;
-    place-content: center;
+    /* display: grid; */
+    /* place-content: center; */
+    /* margin: 0; */
   }
 
   .container {
+    outline: 1px solid red;
+    /* display: flex;
+    padding: 0 var(--spacer);
+    max-width: 60rem;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem; */
+  }
+
+  /* .split {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* justify-content: center; */
-    align-items: center;
+    justify-content: center;
     text-align: center;
     gap: 2rem;
-    padding: 2rem;
-    outline: 1px solid red;
-  }
+    padding: 2rem; */
+    /* outline: 1px solid red; */
+  /* } */
 
+  /* .split > * + * {
+    margin: calc(var(--spacer)*3) 0 0 0;
+  } */
+
+  @media (min-width: 40rem) {
+    .split {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .split > * + * {
+      margin: 0 0 0 var(--spacer);    
+    }
+  }
   /* the dice */
 
   .square {
@@ -132,9 +161,9 @@
 
   /* some button shit */
 
-  #hi {
+  /* #hi {
     display:none
-  }
+  } */
 
   .btn {
     align-self: center;
