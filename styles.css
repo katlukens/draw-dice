@@ -97,7 +97,7 @@
   }
 
   .container {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     padding: 0 var(--spacer);
     max-width: 60rem;
     margin: 0 auto;
@@ -110,7 +110,7 @@
   .dice {
     display: flex;
     justify-content: center;
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
   }
 
   /* dice */
