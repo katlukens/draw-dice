@@ -154,6 +154,10 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+
+  .d6 {
+    margin: 0;
+  }
   
   .d6 {
     font-size: var(--fs-700);
@@ -178,4 +182,5 @@
     - style button
     - make look not shitty
     - JS for dropping dice into existance
-    - animate roll */
+    - animate roll 
+    */
