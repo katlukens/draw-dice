@@ -1,6 +1,6 @@
 :root {
-  --ff-sans: "IBM Plex Sans", sans-serif;
-  --ff-serif: "IBM Plex Serif", serif;
+  --ff-sans: 'Space Grotesk', sans-serif;
+  --ff-serif: 'Special Elite', serif;
 
   /* small screen font-sizes */
   --fs-200: 0.75rem;
@@ -99,7 +99,7 @@
   }
 
   .container {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     /* display: flex;
     padding: 0 var(--spacer);
     max-width: 60rem;
@@ -110,33 +110,39 @@
     gap: 2rem; */
   }
 
-  /* .split {
+  .split,
+  .split > *  {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    gap: 2rem;
-    padding: 2rem; */
-    /* outline: 1px solid red; */
-  /* } */
+    /* gap: 2rem; */
+    /* padding: 2rem; */
+    /* outline: 1px solid blue; */
+  }
 
   /* .split > * + * {
     margin: calc(var(--spacer)*3) 0 0 0;
   } */
 
   @media (min-width: 40rem) {
-    .split {
+    .split,
+    .split > * {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
     }
 
-    .split > * + * {
+    /* .split > * + * {
       margin: 0 0 0 var(--spacer);    
-    }
+    } */
   }
   /* the dice */
+
+  .dice {
+    outline: 1px solid pink;
+  }
 
   .square {
     aspect-ratio: 1/1;
