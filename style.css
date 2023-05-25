@@ -98,50 +98,44 @@
     /* margin: 0; */
   }
 
-  .container {
-    /* outline: 1px solid red; */
-    /* display: flex;
+  /* .container {
+    outline: 1px solid red;
+    display: flex;
     padding: 0 var(--spacer);
     max-width: 60rem;
     margin: 0 auto;
     align-items: center;
     text-align: center;
     justify-content: center;
-    gap: 2rem; */
-  }
+    gap: 2rem;
+  } */
 
-  .split,
-  .split > *  {
+
+  .split {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    /* gap: 2rem; */
-    /* padding: 2rem; */
-    /* outline: 1px solid blue; */
+    gap: 2rem;
+    padding: 2rem;
+    outline: 1px solid blue;
   }
 
   /* .split > * + * {
     margin: calc(var(--spacer)*3) 0 0 0;
   } */
 
-  @media (min-width: 40rem) {
-    .split,
-    .split > * {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-    }
 
     /* .split > * + * {
       margin: 0 0 0 var(--spacer);    
     } */
-  }
+  
   /* the dice */
 
   .dice {
     outline: 1px solid pink;
+    flex: 1;
   }
 
   .square {
@@ -176,17 +170,15 @@
   } */
 
   .btn {
-    align-self: center;
+    /* align-self: center; */
     justify-self: center;
     outline: 1px solid blue;
     margin: 3rem;
     padding: .5rem;
   }
 
-  /* TO DO:
-    - media query for desktop
-    - style button
-    - make look not shitty
-    - JS for dropping dice into existance
-    - animate roll 
-    */
+  @media (min-width: 40rem) {
+    .split {
+      flex-direction: row;
+    }
+}
