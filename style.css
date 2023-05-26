@@ -98,6 +98,18 @@
     /* margin: 0; */
   }
 
+  .container {
+    outline: 1px solid red;
+    padding: 0 var(--spacer);
+    max-width: 60rem;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+
   /* .container {
     outline: 1px solid red;
     display: flex;
@@ -120,7 +132,14 @@
     gap: 2rem;
     padding: 2rem;
     outline: 1px solid blue;
+    flex: 1;
   }
+
+  @media (min-width: 56rem) {
+    .split {
+      flex-direction: row;
+    }
+}
 
   /* .split > * + * {
     margin: calc(var(--spacer)*3) 0 0 0;
@@ -134,9 +153,12 @@
   /* the dice */
 
   .dice {
-    outline: 1px solid pink;
+    /* display: flex; */
+    justify-content: center;
+    outline: 1px solid green;
     flex: 1;
   }
+
 
   .square {
     aspect-ratio: 1/1;
@@ -144,6 +166,7 @@
     background: var(--clr-primary-400);
     text-align: center;
     contain: strict;
+    outline: 2px dotted orange;
   }
 
   .square p {
@@ -156,13 +179,10 @@
   }
 
   .d6 {
-    margin: 0;
-  }
-  
-  .d6 {
+    /* margin: 0; */
     font-size: var(--fs-700);
   }
-
+  
   /* some button shit */
 
   /* #hi {
@@ -176,9 +196,3 @@
     margin: 3rem;
     padding: .5rem;
   }
-
-  @media (min-width: 40rem) {
-    .split {
-      flex-direction: row;
-    }
-}
