@@ -28,8 +28,21 @@ function rollDice(){
 //    alert (results);
 }
 
+// change text orientation of dice on click of button
+function sideWays(){
+    var elements = document.querySelectorAll('.d6')
+    elements.forEach(function(element) {
+        // element.style.transform = "rotate(0deg)";
+        element.style.webkitTransform = "rotate(0deg)";
+        element.style.mozTransform = "rotate(0deg)";
+        });
+}
+
 function addListener(){
-    document.querySelector(".btn").addEventListener("click", rollDice);
+    document.querySelector(".btn").addEventListener("click", function(){
+        rollDice();
+        sideWays();
+    });
 }
 
 document.addEventListener("DOMContentLoaded", function(event){

@@ -92,7 +92,7 @@
   body {
     background: var(--clr-neutral-400);
     font-size: var(--fs-900);
-    font-family: serif;
+    font-family: var(--ff-sans);
     /* display: grid; */
     /* place-content: center; */
     /* margin: 0; */

@@ -1,0 +1,132 @@
+:root {
+    --ff-sans: 'Space Grotesk', sans-serif;
+    --ff-serif: 'Special Elite', serif;
+
+    /* small screen font-sizes */
+    --fs-200: 0.75rem;
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 1.375rem;
+    --fs-600: 1.75rem;
+    --fs-700: 2rem;
+    --fs-900: 2.125rem;
+
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --clr-neutral-100: #fff;
+    --clr-neutral-200: #eef1f6;
+    --clr-neutral-300: #a9afbc;
+    --clr-neutral-400: #737b8c;
+    --clr-neutral-500: #434956;
+    --clr-neutral-900: #020203;
+
+    --clr-primary-300: #f3f7ff;
+    --clr-primary-400: #8ea8da;
+
+    --br: 1rem;
+    --spacer: 1rem;
+}
+  
+@media (min-width: 40em) {
+:root {
+    --fs-400: 1.375rem;
+    --fs-500: 1.75rem;
+    --fs-600: 2.125rem;
+    --fs-900: 4.25rem;
+}
+}
+
+/* reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul,
+ol,
+ul[class], 
+ol[class] {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    padding: 0 var(--spacer);
+    max-width: 60rem;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.split {
+    margin-bottom: 1rem;
+}
+
+.dice {
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 2rem; */
+    outline: 1px solid green;
+}
+
+.prompt h3 {
+    padding-bottom: .75rem;
+}
+
+.square {
+    display: flex;
+    height: 4rem;
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    transform: 35deg;
+    -webkit-transform: rotate(35deg); 
+    -moz-transform: rotate(35deg);
+    margin-bottom: .75rem;
+    background: var(--clr-primary-400);
+    outline: 2px dotted orange;
+}
+
+.d6 {
+    color: navy;
+    font-size: var(--fs-200);
+    /* background-color: lightblue; */
+    transform: -35deg;
+    -webkit-transform: rotate(-35deg); 
+    -moz-transform: rotate(-35deg);
+}
+
+/* #feel {
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg);
+} */
+
+@media (min-width: 40em){
+    .container {
+        outline: 1px solid lightblue;
+    }
+    
+    .split {
+        display: flex;
+        justify-content: center;
+        outline: 1px solid lightgreen;
+    }
+    
+    .dice {
+        padding: 0 4rem;
+    }
+    
+}
+
