@@ -30,12 +30,24 @@ function rollDice(){
 
 // change text orientation of dice on click of button
 function sideWays(){
-    var elements = document.querySelectorAll('.d6')
-    elements.forEach(function(element) {
-        // element.style.transform = "rotate(0deg)";
-        element.style.webkitTransform = "rotate(0deg)";
-        element.style.mozTransform = "rotate(0deg)";
-        });
+    var noun = document.querySelector('#n')
+    var feel = document.querySelector('#f')
+    var time = document.querySelector('#t')
+
+    noun.style.webkitTransform = "rotate(35deg)";
+    noun.style.mozTransform = "rotate(35deg)";
+    noun.style.boxShadow = ".75rem .75rem .5rem #252C34, .45rem .45rem .5rem white inset, 0rem -.05rem .25rem white inset";
+
+    feel.style.webkitTransform = "rotate(-35deg)";
+    feel.style.mozTransform = "rotate(-35deg)";
+    feel.style.boxShadow = "-.75rem .75rem .5rem #252C34, -.45rem .45rem .5rem white inset, 0rem -.05rem .25rem white inset";
+
+
+    time.style.webkitTransform = "rotate(35deg)";
+    time.style.mozTransform = "rotate(35deg)";
+    time.style.boxShadow = ".75rem .75rem .5rem #252C34, .45rem .45rem .5rem white inset, 0rem -.05rem .25rem white inset";
+
+
 }
 
 function addListener(){
